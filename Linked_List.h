@@ -17,5 +17,9 @@ namespace LISTNODE {
 	ListNode *mergeTwoLists(ListNode *l1, ListNode *l2);
 	//83. 删除排序链表中的重复元素
 	ListNode* deleteDuplicates(ListNode* head);
+
+	//24. 两两交换链表中的节点
+	//1）构建头节点
+	ListNode* swapPairs(ListNode* head);
 }
 #endif
