@@ -8,7 +8,8 @@ struct ListNode {
 	ListNode(int x) : val(x), next(NULL) {}
 };
 namespace LISTNODE {
-	void createNode(ListNode* node);
+	ListNode* createNode();
+	void printNode(ListNode* node);
     void deleteNode(ListNode* node);
 	ListNode* reverseList(ListNode* head);
 	// 876.链表的中间节点

@@ -191,7 +191,7 @@ public:
 };
 
 int main() {
-	std::string str = "A man, a plan, a canal : Panama";
+	/*std::string str = "A man, a plan, a canal : Panama";
 	std::string str1 = "UUUDDDLR";
 	Solution s;
 	std::cout << s.toLowerCase(str) << std::endl;
@@ -199,9 +199,11 @@ int main() {
 	std::cout << s.reverseWords(str) << std::endl;
 	std::cout << s.judgeCircle(str) << std::endl;
 	std::cout << s.findLUSlength(str, str1) << std::endl;
-	std::cout << "s.isPalindrome(str): " << s.isPalindrome(str) << std::endl;
-	ListNode* node = (ListNode*)malloc(sizeof(ListNode));
-	node->val = 3;
-	LISTNODE::createNode(node);
-	LISTNODE::deleteNode(node);
+	std::cout << "s.isPalindrome(str): " << s.isPalindrome(str) << std::endl;*/
+	
+	ListNode* node;
+	node = LISTNODE::createNode();
+	LISTNODE::printNode(node);
+	//LISTNODE::deleteNode(node);
+	return 0;
 }
