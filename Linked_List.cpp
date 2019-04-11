@@ -40,10 +40,12 @@ void LISTNODE::printNode(ListNode* node) {
 	putchar('\n');
 }
 
-//void LISTNODE::deleteNode(ListNode* node) {
-//	node->val = node->next->val;
-//	node->next = node->next->next;
-//}
+// 参考资料：[leetcode-237 删除链表中的节点(DeleteNodeInALinkedList)](https://blog.csdn.net/hocsoul/article/details/80152028)
+void LISTNODE::deleteNode(ListNode* node) {
+	node->val = node->next->val;
+	node->next = node->next->next;
+}
+
 //
 //ListNode* LISTNODE::reverseList(ListNode* head) {
 //	ListNode* pre = NULL;

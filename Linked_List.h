@@ -7,6 +7,7 @@ struct ListNode {
 	ListNode *next;
 	ListNode(int x) : val(x), next(NULL) {}
 };
+
 namespace LISTNODE {
 	ListNode* createNode();
 	void printNode(ListNode* node);

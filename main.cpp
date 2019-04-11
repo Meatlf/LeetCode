@@ -204,6 +204,8 @@ int main() {
 	ListNode* node;
 	node = LISTNODE::createNode();
 	LISTNODE::printNode(node);
-	//LISTNODE::deleteNode(node);
+	LISTNODE::deleteNode(node);
+	LISTNODE::printNode(node);
+
 	return 0;
 }
