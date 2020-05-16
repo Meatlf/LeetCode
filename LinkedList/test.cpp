@@ -8,7 +8,7 @@
 class Solution
 {
 public:
-	// 709.转换成小写字母
+	// 709.
 	std::string toLowerCase(std::string str) {
 		if (str == "")
 			return "";
@@ -20,13 +20,11 @@ public:
 				}
 			}
 		}
-
 		return str;
 	}
 
-	// 344.反转字符串
+	// 344.
 	std::string reverseString(std::string s) {
-		// 方法一
 		/*if (s == "")
 			return "";
 		else
@@ -39,12 +37,11 @@ public:
 			}
 			return s;
 		}*/
-		// 方法二
 		std::reverse(s.begin(), s.end());
 		return s;
 	}
 
-	// 557.反转字符串中的单词III
+	// 557.
 	std::string reverseWords(std::string s) {
 		int i = 0, p = 0, q = 0;
 		for (i = 0;i < s.length();i++) {
@@ -71,23 +68,23 @@ public:
 		return s;
 	}
 
-	// 657.机器人能否返回原点
+	// 657.
 	bool judgeCircle(std::string moves) {
 		int u = 0, d = 0, l = 0, r = 0;
 		//for (int i = 0;i < moves.length();i++) {
 		//	if (moves[i] == 'U') {
 		//		u++;
-		//		continue;	// 优化添加的代码
+		//		continue;
 		//	}
 		//	else if (moves[i] == 'D')
 		//	{
 		//		d++;
-		//		continue;	// 优化
+		//		continue;
 		//	}
 		//	else if (moves[i] == 'L')
 		//	{
 		//		l++;
-		//		continue;	// 优化
+		//		continue;	// 锟脚伙拷
 		//	}
 		//	else
 		//	{
@@ -110,7 +107,7 @@ public:
 		return u == d && l == r;
 	}
 
-	// 521.最长特殊序列I
+	// 521.
 	int findLUSlength(std::string a, std::string b) {
 		/*	if (a.length() == b.length()) {
 				return a == b ? -1:a.length();
@@ -122,7 +119,7 @@ public:
 		return a == b ? -1 : std::max(a.length(), b.length());
 	}
 
-	// 125. 验证回文串
+	// 125.
 	bool isPalindrome(std::string s) {
 		int i = 0, j = s.length() - 1;
 		while (i < j)
@@ -157,7 +154,7 @@ public:
 		}
 	}
 
-	// 929. 独特的电子邮件地址
+	// 929.
 	int numUniqueEmails(std::vector<std::string>& emails) {
 		int n;
 		std::vector<std::string> unique_emails;
@@ -187,7 +184,6 @@ public:
 			}
 		}
 	}
-
 };
 
 int main() {
