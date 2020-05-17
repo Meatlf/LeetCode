@@ -94,7 +94,31 @@ ListNode *LISTNODE::middleNode(ListNode *head)
 	return pre;
 }
 
-ListNode *LISTNODE::mergeTwoLists(ListNode *l1, ListNode *l2)
+ListNode *LISTNODE::mergeTwoListsV1(ListNode *l1, ListNode *l2)
+{
+	ListNode *preHead = new ListNode(-1);
+	ListNode *prev = preHead;
+	while (l1 != NULL && l2 != NULL)
+	{
+		// prev指向较小的那一个
+		// prev和较小的那一个均向后移一个
+		if (l1->val <= l2->val)
+		{
+			prev->next = l1;
+			l1 = l1->next;
+		}
+		else
+		{
+			prev->next = l2;
+			l2 = l2->next;
+		}
+		prev = prev->next;
+	}
+	prev->next = l1 == NULL ? l2 : l1;
+	return preHead->next;
+}
+
+ListNode *LISTNODE::mergeTwoListsV2(ListNode *l1, ListNode *l2)
 {
 	if (l1 == NULL)
 		return l2;
@@ -103,12 +127,12 @@ ListNode *LISTNODE::mergeTwoLists(ListNode *l1, ListNode *l2)
 
 	if (l1->val < l2->val)
 	{
-		l1->next = mergeTwoLists(l1->next, l2);
+		l1->next = mergeTwoListsV2(l1->next, l2);
 		return l1;
 	}
 	else
 	{
-		l2->next = mergeTwoLists(l1, l2->next);
+		l2->next = mergeTwoListsV2(l1, l2->next);
 		return l2;
 	}
 }
