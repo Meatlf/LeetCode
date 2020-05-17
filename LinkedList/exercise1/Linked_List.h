@@ -24,5 +24,8 @@ namespace LISTNODE
 
 	// 24.
 	ListNode *swapPairs(ListNode *head);
+
+	// 160.相交链表
+	ListNode *getIntersectionNode(ListNode *headA, ListNode *headB);
 } // namespace LISTNODE
 #endif
