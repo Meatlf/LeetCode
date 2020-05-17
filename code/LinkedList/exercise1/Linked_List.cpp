@@ -49,19 +49,30 @@ void LISTNODE::deleteNode(ListNode *node)
 	node->next = node->next->next;
 }
 
-ListNode *LISTNODE::reverseList(ListNode *head)
+ListNode *LISTNODE::reverseListV1(ListNode *head)
 {
 	ListNode *pre = NULL;
 	ListNode *cur = head;
 
 	while (cur != NULL)
 	{
-		ListNode *next = cur->next;
+		ListNode *next = cur->next; // 首先要判断cur不等于NULL,然后再执行该语句.
 		cur->next = pre;
 		pre = cur;
 		cur = next;
 	}
 	return pre;
+}
+
+ListNode *LISTNODE::reverseListV2(ListNode *head)
+{
+	if (head == NULL || head->next == NULL)
+		return head;
+
+	ListNode *cur = reverseListV2(head->next);
+	head->next->next = head;
+	head->next = NULL;
+	return cur;
 }
 
 ListNode *LISTNODE::middleNode(ListNode *head)

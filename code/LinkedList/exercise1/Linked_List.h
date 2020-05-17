@@ -27,5 +27,11 @@ namespace LISTNODE
 
 	// 160.相交链表
 	ListNode *getIntersectionNode(ListNode *headA, ListNode *headB);
+
+	// 206.反转链表
+	// V1: 迭代法
+	ListNode *reverseListV1(ListNode *head);
+	// V2: 递归法
+	ListNode *reverseListV2(ListNode *head);
 } // namespace LISTNODE
 #endif
