@@ -192,3 +192,9 @@ ListNode *LISTNODE::getIntersectionNode(ListNode *headA, ListNode *headB)
 	}
 	return a;
 }
+
+void LISTNODE::deleteNode(ListNode *node)
+{
+	node->val = node->next->val;
+	node->next = node->next->next;
+}

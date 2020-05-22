@@ -48,5 +48,9 @@ namespace LISTNODE
 	ListNode *reverseListV1(ListNode *head);
 	// V2: 递归法
 	ListNode *reverseListV2(ListNode *head);
+
+	// 237.删除链表中的节点
+	// 参考资料:[1] [删除链表中的节点](https://leetcode-cn.com/problems/delete-node-in-a-linked-list/solution/shan-chu-lian-biao-zhong-de-jie-dian-by-leetcode/)
+	void deleteNode(ListNode *node);
 } // namespace LISTNODE
 #endif
