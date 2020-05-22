@@ -43,12 +43,6 @@ void LISTNODE::printNode(ListNode *node)
 	putchar('\n');
 }
 
-void LISTNODE::deleteNode(ListNode *node)
-{
-	node->val = node->next->val;
-	node->next = node->next->next;
-}
-
 ListNode *LISTNODE::reverseListV1(ListNode *head)
 {
 	ListNode *pre = NULL;
@@ -197,4 +191,45 @@ void LISTNODE::deleteNode(ListNode *node)
 {
 	node->val = node->next->val;
 	node->next = node->next->next;
+}
+
+ListNode *LISTNODE::removeNthFromEndV1(ListNode *head, int n)
+{
+	ListNode *dummy = new ListNode(0);
+	dummy->next = head;
+	ListNode *p = head;
+	int length = 0;
+	while (p != NULL)
+	{
+		p = p->next;
+		length++;
+	}
+	length -= n;
+	p = dummy;
+	while (length > 0)
+	{
+		length--;
+		p = p->next;
+	}
+	p->next = p->next->next;
+	return dummy->next;
+}
+
+ListNode *LISTNODE::removeNthFromEndV2(ListNode *head, int n)
+{
+	ListNode *dummy = new ListNode(0);
+	dummy->next = head;
+	ListNode *first = dummy;
+	ListNode *second = dummy;
+
+	for (int i = 1; i <= n + 1; i++)
+		first = first->next;
+
+	while (first != NULL)
+	{
+		first = first->next;
+		second = second->next;
+	}
+	second->next = second->next->next;
+	return dummy->next;
 }

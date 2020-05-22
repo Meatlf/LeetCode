@@ -13,7 +13,7 @@ namespace LISTNODE
 {
 	ListNode *createNode();
 	void printNode(ListNode *node);
-	void deleteNode(ListNode *node);
+
 	ListNode *reverseList(ListNode *head);
 	// 876.
 	ListNode *middleNode(ListNode *head);
@@ -41,6 +41,7 @@ namespace LISTNODE
 	ListNode *swapPairs(ListNode *head);
 
 	// 160.相交链表
+	// 参考资料: [1] [教你用浪漫的方式找到两个单链表相交的起始节点](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/solution/jiao-ni-yong-lang-man-de-fang-shi-zhao-dao-liang-2/)
 	ListNode *getIntersectionNode(ListNode *headA, ListNode *headB);
 
 	// 206.反转链表
@@ -52,5 +53,13 @@ namespace LISTNODE
 	// 237.删除链表中的节点
 	// 参考资料:[1] [删除链表中的节点](https://leetcode-cn.com/problems/delete-node-in-a-linked-list/solution/shan-chu-lian-biao-zhong-de-jie-dian-by-leetcode/)
 	void deleteNode(ListNode *node);
+
+	// 19.删除链表的倒数第N个节点
+	// 参考资料: [1] [删除链表的倒数第N个节点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/solution/shan-chu-lian-biao-de-dao-shu-di-nge-jie-dian-by-l/)
+	// V1: 两次遍历算法
+	ListNode *removeNthFromEndV1(ListNode *head, int n);
+
+	// V2: 一次遍历算法
+	ListNode *removeNthFromEndV2(ListNode *head, int n);
 } // namespace LISTNODE
 #endif
