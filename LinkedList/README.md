@@ -42,7 +42,6 @@
 
 ### 206.反转链表
 
-参考资料: [动画演示+多种解法 206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/solution/dong-hua-yan-shi-206-fan-zhuan-lian-biao-by-user74/)
 
 **迭代法**:迭代法基于**双指针迭代**.
 
@@ -69,5 +68,3 @@
 ## 策略
 
 ### 快慢指针
-
-*XMind: ZEN - Trial Version*
